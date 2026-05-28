@@ -14,6 +14,10 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    assetsInclude: ['**/*.glb']
+    assetsInclude: ['**/*.glb'],
+    // ADDED THIS BLOCK BELOW
+    ssr: {
+      noExternal: ['gsap'] 
+    }
   }
 });

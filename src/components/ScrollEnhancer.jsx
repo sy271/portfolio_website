@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
-import pkg from 'gsap/ScrollTrigger';
-const { ScrollTrigger } = pkg;
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ScrollEnhancer() {
 	useEffect(() => {
