@@ -13,7 +13,7 @@ const projects = [
 		index: "01",
 		category: "AI",
 		title: "PolicySense",
-		techLine: "Next.js, Django REST, Supabase & RAG",
+		// techLine: "Next.js, Django REST, Supabase & RAG",
 		stack: [
 			"Next.js",
 			"React",
@@ -32,7 +32,7 @@ const projects = [
 		description:
 			"AI-integrated family post-insurance analysis platform that centralizes policies, extracts key PDF details, detects overlap/gaps, and provides emergency claim guidance via chatbot.",
 		github: "https://github.com/sy271/cicsc-insurance-monorepo",
-		demo: "",
+		demo: "https://youtu.be/14KYDqM__t8",
 		image:
 			"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
 	},
@@ -41,7 +41,7 @@ const projects = [
 		index: "02",
 		category: "Robotics",
 		title: "ROSJoyDroid",
-		techLine: "Android, ROS 2, Fast DDS & C++ JNI",
+		// techLine: "Android, ROS 2, Fast DDS & C++ JNI",
 		stack: [
 			"Kotlin",
 			"Jetpack Compose",
@@ -69,7 +69,7 @@ const projects = [
 		index: "03",
 		category: "Mobile",
 		title: "PawSure App",
-		techLine: "Flutter, NestJS, PostgreSQL & TypeORM",
+		// techLine: "Flutter, NestJS, PostgreSQL & TypeORM",
 		stack: ["Flutter", "NestJS", "PostgreSQL", "TypeORM", "JWT"],
 		description:
 			"Cross-platform pet care superapp with dual-role marketplace, AI health scanning, and real-time community features.",
@@ -83,11 +83,11 @@ const projects = [
 		index: "04",
 		category: "AI",
 		title: "Roamie",
-		techLine: "Flutter, Firebase, Gemini API & Google Maps API",
+		// techLine: "Flutter, Firebase, Gemini API & Google Maps API",
 		stack: ["Flutter", "Dart", "Firebase", "Gemini API", "Google Maps API", "OpenWeather API"],
 		description:
 			"AI-powered personal travel assistant that builds budget-friendly itineraries with dynamic re-planning, translation, and integrated trip tools.",
-		github: "https://github.com/Roamieee/RoamieRepo",
+		github: "https://github.com/sy271/Roamie",
 		demo: "",
 		image:
 			"https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=900&q=80",
