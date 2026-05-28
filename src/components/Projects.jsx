@@ -4,6 +4,7 @@ import ExternalLink from "lucide-react/dist/esm/icons/external-link.js";
 import ChevronLeft from "lucide-react/dist/esm/icons/chevron-left.js";
 import ChevronRight from "lucide-react/dist/esm/icons/chevron-right.js";
 import { IconGithub } from "./icons/BrandIcons.jsx";
+import utmroboconwebsite from "../assets/images/utmroboconwebsite.png";
 
 const GAP = 16;
 
@@ -16,18 +17,11 @@ const projects = [
 		// techLine: "Next.js, Django REST, Supabase & RAG",
 		stack: [
 			"Next.js",
-			"React",
-			"TypeScript",
-			"Tailwind CSS",
-			"Django REST Framework",
-			"Supabase PostgreSQL",
-			"Supabase Auth",
-			"Supabase Storage",
-			"JWT",
-			"Gemini 1.5 Flash",
-			"PyMuPDF",
-			"all-MiniLM-L6-v2",
-			"Llama (HF Inference)",
+            "Django REST Framework",
+            "Supabase",
+            "PostgreSQL",
+            "Gemini 1.5 Flash",
+            "Llama (RAG)",
 		],
 		description:
 			"AI-integrated family post-insurance analysis platform that centralizes policies, extracts key PDF details, detects overlap/gaps, and provides emergency claim guidance via chatbot.",
@@ -44,18 +38,10 @@ const projects = [
 		// techLine: "Android, ROS 2, Fast DDS & C++ JNI",
 		stack: [
 			"Kotlin",
-			"Jetpack Compose",
-			"Android SDK 34",
-			"Canvas Rendering",
-			"C++",
-			"JNI",
-			"ROS 2",
-			"Fast DDS",
-			"Gradle Kotlin DSL",
-			"CMake",
-			"Android NDK",
-			"Ninja",
-			"geometry_msgs Point32",
+            "Jetpack Compose",
+            "C++",
+            "ROS 2",
+            "Fast DDS",
 		],
 		description:
 			"Android-based ROS 2 robot monitoring app for Robocon that visualizes Robot 1, Robot 2, and predicted object positions in real time on a scaled game-field map.",
@@ -70,7 +56,7 @@ const projects = [
 		category: "Mobile",
 		title: "PawSure App",
 		// techLine: "Flutter, NestJS, PostgreSQL & TypeORM",
-		stack: ["Flutter", "NestJS", "PostgreSQL", "TypeORM", "JWT"],
+		stack: ["Flutter", "NestJS", "PostgreSQL", "TypeORM"],
 		description:
 			"Cross-platform pet care superapp with dual-role marketplace, AI health scanning, and real-time community features.",
 		github: "https://github.com/sy271/PawsureApp",
@@ -84,13 +70,26 @@ const projects = [
 		category: "AI",
 		title: "Roamie",
 		// techLine: "Flutter, Firebase, Gemini API & Google Maps API",
-		stack: ["Flutter", "Dart", "Firebase", "Gemini API", "Google Maps API", "OpenWeather API"],
+		stack: ["Flutter", "Firebase", "Gemini API", "Google Maps API"],
 		description:
 			"AI-powered personal travel assistant that builds budget-friendly itineraries with dynamic re-planning, translation, and integrated trip tools.",
 		github: "https://github.com/sy271/Roamie",
 		demo: "",
 		image:
 			"https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=900&q=80",
+	},
+	{
+		id: "p5",
+		index: "05",
+		category: "Website",
+		title: "Robocon Website (Maintenance)",
+		stack: ["React", "Node.js", "Express", "Vercel"],
+		description:
+			"Maintenance and development of the Robocon website. Responsible for dependency upgrades, fixing production runtime issues, ensuring SPA deep-linking works, and building and verifying production artifacts.",
+		github: "https://github.com/sy271/RoboconTeamWebsite_2425",
+		demo: "",
+		image:
+			utmroboconwebsite.src,
 	},
 ];
 
