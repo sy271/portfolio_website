@@ -17,7 +17,7 @@ export default defineConfig({
     assetsInclude: ['**/*.glb'],
     // ADDED THIS BLOCK BELOW
     ssr: {
-      noExternal: ['gsap'] 
+      noExternal: ['gsap', 'lucide-react'] 
     }
   }
 });
