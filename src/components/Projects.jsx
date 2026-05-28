@@ -85,7 +85,7 @@ const projects = [
 		title: "Robocon Website (Maintenance)",
 		stack: ["React", "Node.js", "Express", "Vercel"],
 		description:
-			"Maintenance and development of the Robocon website. Responsible for dependency upgrades, fixing production runtime issues, ensuring SPA deep-linking works, and building and verifying production artifacts.",
+			"Maintenance and development of the Robocon website. Responsible for dependency upgrades, modules updates, fixing production runtime issues, ensuring SPA deep-linking works, and building and verifying production artifacts.",
 		github: "https://github.com/sy271/RoboconTeamWebsite_2425",
 		demo: "",
 		image:
