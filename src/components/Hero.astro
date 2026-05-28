@@ -1,5 +1,6 @@
 ---
 import meImg from "../assets/images/me.png";
+import resume from "../assets/resume.pdf?url";
 
 /** Rotating words after “I build things for the web.” */
 // const taglines = [
@@ -25,10 +26,9 @@ const roleWords = [
 
 <!-- Navbar is a sibling of #hero so sticky works (hero uses overflow/clip). -->
 <nav class="floating-nav" aria-label="Primary navigation">
-	<a class="floating-nav__brand" href="#hero">CSY</a>
+	<a class="floating-nav__brand" href="#hero">ShuYan</a>
 	<div class="floating-nav__links">
 		<a href="#about">About</a>
-		<a href="#education">Education</a>
 		<a href="#experience">Experience</a>
 		<a href="#projects">Projects</a>
 		<a href="#contact">Contact</a>
@@ -75,40 +75,40 @@ const roleWords = [
 			<p class="hero-v2__role-solid">
 				<span data-role-solid>{roleWords[0].solid}</span>
 			</p>
-		</div>
-	</div>
 
-	<div class="hero-v2__float-tags">
-		<span class="hero-v2__pill hero-v2__pill--outline"
-			>Y3 · Software Engineering</span
-		>
-		<a
-			class="hero-v2__pill hero-v2__pill--cta"
-			href="/resume.pdf"
-			target="_blank"
-			rel="noreferrer"
-		>
-			View Resume
-			<svg
-				class="hero-v2__arrow"
-				width="16"
-				height="16"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2.2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M7 17 17 7M17 7h-6M17 7v6"></path>
-			</svg>
-		</a>
+			<div class="hero-v2__float-tags">
+				<span class="hero-v2__pill hero-v2__pill--outline"
+					>Y3 · Software Engineering</span
+				>
+				<a
+					class="hero-v2__pill hero-v2__pill--cta"
+					href={resume}
+					target="_blank"
+					rel="noreferrer"
+				>
+					View Resume
+					<svg
+						class="hero-v2__arrow"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path d="M7 17 17 7M17 7h-6M17 7v6"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="hero-v2__social">
 		<a
-			href="https://linkedin.com/in/your-profile"
+			href="https://linkedin.com/in/chenshuyan"
 			target="_blank"
 			rel="noreferrer"
 			aria-label="LinkedIn"
@@ -126,7 +126,7 @@ const roleWords = [
 			</svg>
 		</a>
 		<a
-			href="https://github.com/your-username"
+			href="https://github.com/sy271"
 			target="_blank"
 			rel="noreferrer"
 			aria-label="GitHub"
@@ -144,7 +144,7 @@ const roleWords = [
 			</svg>
 		</a>
 		<a
-			href="https://facebook.com/your-profile"
+			href="https://www.facebook.com/share/1K31g9kj6z/?mibextid=wwXIfr"
 			target="_blank"
 			rel="noreferrer"
 			aria-label="Facebook"
@@ -162,7 +162,7 @@ const roleWords = [
 			</svg>
 		</a>
 		<a
-			href="https://instagram.com/your-profile"
+			href="https://instagram.com/shuyan04"
 			target="_blank"
 			rel="noreferrer"
 			aria-label="Instagram"

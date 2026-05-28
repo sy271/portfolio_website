@@ -1,0 +1,24 @@
+---
+interface Props {
+	name: string;
+	rating: number;
+}
+
+const { name, rating } = Astro.props;
+---
+
+<article class="soft-card">
+	<div class="soft-card__icon" aria-hidden="true">
+		<slot />
+	</div>
+	<h4 class="soft-card__name">{name}</h4>
+	<div class="soft-card__dots" aria-label={`${rating} out of 5`}>
+		{
+			[1, 2, 3, 4, 5].map((i) => (
+				<span
+					class:list={["soft-card__dot", { "soft-card__dot--on": i <= rating }]}
+				></span>
+			))
+		}
+	</div>
+</article>

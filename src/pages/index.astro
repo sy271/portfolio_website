@@ -1,82 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import Skills from '../components/Skills.svelte';
+import AboutMe from '../components/AboutMe.astro';
+import ExperienceEducation from '../components/ExperienceEducation.astro';
 import Projects from '../components/Projects.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import ScrollEnhancer from '../components/ScrollEnhancer.jsx';
+import Galaxy from "../components/Galaxy.jsx";
 import '../styles/global.css';
 ---
 
 <Layout>
 	<ScrollEnhancer client:load />
+	<div class="galaxy-bg" aria-hidden="true">
+		<Galaxy
+			client:load
+			mouseRepulsion={true}
+			mouseInteraction={false}
+			density={0.8}
+			glowIntensity={0.22}
+			saturation={0}
+			hueShift={255}
+			twinkleIntensity={0.2}
+			rotationSpeed={0.06}
+			repulsionStrength={2}
+			autoCenterRepulsion={0}
+			starSpeed={0.42}
+			speed={0.6}
+			quality={0.55}
+			maxFps={25}
+		/>
+	</div>
 
 	<div class="page-shell">
 		<Hero />
 
-		<section id="about" class="section section-reveal">
-			<div class="section-head">
-				<h2 class="section-title">About</h2>
-				<p>Who I am, what I enjoy building, and the tools I use.</p>
-			</div>
-			<div class="about-split">
-				<div class="about-split__bio">
-					<div class="info-card">
-						<p>
-							I am a Year 3 Software Engineering student at Universiti Teknologi Malaysia (UTM). I
-							love building web apps that are useful in real student life, from dashboards to
-							automated tools.
-						</p>
-						<p>
-							Fun fact: I enjoy turning class assignments into portfolio-ready products with polished
-							UI/UX and smooth animations.
-						</p>
-					</div>
-				</div>
-				<Skills client:visible embedded={true} />
-			</div>
-		</section>
+		<AboutMe />
 
-		<section id="education" class="section section-reveal">
-			<div class="section-head">
-				<h2 class="section-title">Education</h2>
-				<p>Academic background and focus areas.</p>
-			</div>
-			<div class="timeline">
-				<article class="timeline-item">
-					<h3>Bachelor of Software Engineering</h3>
-					<p>
-						Universiti Teknologi Malaysia (UTM) · Year 3 · Coursework in software design, data
-						structures, databases, and web systems.
-					</p>
-				</article>
-				<article class="timeline-item">
-					<h3>Focus</h3>
-					<p>Full-stack development, APIs, and human-centered interfaces.</p>
-				</article>
-			</div>
-		</section>
-
-		<section id="experience" class="section section-reveal">
-			<div class="section-head">
-				<h2 class="section-title">Experience</h2>
-				<p>Leadership, events, and project collaboration.</p>
-			</div>
-			<div class="timeline">
-				<article class="timeline-item">
-					<h3>Hackathon Team Member</h3>
-					<p>Built a student utility app prototype in a 48-hour sprint with teammates.</p>
-				</article>
-				<article class="timeline-item">
-					<h3>University Club Contributor (IEEE / ACM)</h3>
-					<p>Supported events, collaborative coding sessions, and beginner workshops.</p>
-				</article>
-				<article class="timeline-item">
-					<h3>Lab and Coursework Projects</h3>
-					<p>Developed software engineering projects focused on APIs, algorithms, and testing.</p>
-				</article>
-			</div>
-		</section>
+		<ExperienceEducation />
 
 		<Projects client:load />
 		<ContactForm client:load />

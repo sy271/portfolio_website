@@ -1,0 +1,44 @@
+.lanyard-wrapper {
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	height: min(82vh, 38rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1);
+	transform-origin: center;
+}
+
+.lanyard-cursor {
+	position: fixed;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.9);
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 65%);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 9999;
+	animation: lanyard-cursor-pulse 1.4s ease-in-out infinite;
+	transition: width 140ms ease, height 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.lanyard-cursor--dragging {
+	width: 34px;
+	height: 34px;
+	border-color: rgba(186, 167, 255, 0.95);
+	background: radial-gradient(circle, rgba(134, 111, 255, 0.3) 0%, rgba(134, 111, 255, 0) 70%);
+}
+
+@keyframes lanyard-cursor-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(186, 167, 255, 0.35);
+	}
+	70% {
+		box-shadow: 0 0 0 12px rgba(186, 167, 255, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(186, 167, 255, 0);
+	}
+}

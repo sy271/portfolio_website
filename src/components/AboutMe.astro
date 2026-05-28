@@ -1,0 +1,180 @@
+---
+import AboutLanyard from "./AboutLanyard.jsx";
+import SoftSkillCard from "./SoftSkillCard.astro";
+
+const technical = [
+	{
+		label: "Frontend & app development",
+		pct: 88,
+		items: "ReactJS, JavaScript, HTML, CSS, Android (Kotlin), Dart, Flutter",
+	},
+	{
+		label: "Backend & databases",
+		pct: 70,
+		items: "PHP, Laravel, MySQL, Java, Python",
+	},
+	{
+		label: "Core programming & robotics",
+		pct: 80,
+		items: "C++, C, ROS 2",
+	},
+	{
+		label: "Tools & platforms",
+		pct: 83,
+		items: "Git, GitHub, STM32CubeIDE, Linux, Figma, Android Studio",
+	},
+];
+---
+
+<section id="about" class="section section-reveal about-showcase" aria-label="About me">
+	<div class="about-showcase__glow about-showcase__glow--1" aria-hidden="true"></div>
+	<div class="about-showcase__glow about-showcase__glow--2" aria-hidden="true"></div>
+
+	<div class="about-showcase__inner">
+		<!-- Top left: portrait -->
+		<div class="about-showcase__cell about-showcase__cell--photo">
+			<div class="about-showcase__visual">
+				<div class="about-showcase__blob" aria-hidden="true"></div>
+				<AboutLanyard client:load position={[0, 0, 20]} gravity={[0, -40, 0]} />
+			</div>
+		</div>
+
+		<!-- Top right: tagline + summary -->
+		<div class="about-showcase__cell about-showcase__cell--intro">
+			<h2 class="about-showcase__headline">
+				<span class="about-showcase__accent">Innovation</span><span class="about-showcase__headline-mid"> Through Code &amp; </span><span class="about-showcase__accent">Leadership</span>
+			</h2>
+			<p class="about-showcase__summary">
+				I am <strong>Chen Shu Yan</strong>, a Year 3 Software Engineering student with a strong
+				background in
+				<span class="about-showcase__hl">robotics programming</span>,
+				<span class="about-showcase__hl">full-stack development</span>, and
+				<span class="about-showcase__hl">technical leadership</span>. I have been actively involved in
+				<span class="about-showcase__hl">UTM Robocon from 2023 to 2025</span>, where I proudly advanced
+				from a junior trainee to <span class="about-showcase__hl">Vice President</span>. During my
+				time there, I gained valuable experience developing
+				<span class="about-showcase__hl">ROS-based applications</span> and maintaining team websites. I am highly passionate about collaborating with others, learning new technologies,
+				and contributing my skills to support innovative and impactful projects.
+			</p>
+		</div>
+
+		<!-- Bottom left: technical skills (panel + per-category cards) -->
+		<div class="about-showcase__cell about-showcase__cell--technical">
+			<div class="about-panel about-panel--technical">
+				<h3 class="about-panel__title">Technical skills</h3>
+				<div class="tech-skill-stack">
+					{
+						technical.map((row) => (
+							<div class="tech-skill-card">
+								<div class="tech-skill-card__top">
+									<span class="tech-skill-card__label">{row.label}</span>
+									<span class="tech-skill-card__pct">{row.pct}%</span>
+								</div>
+								<div class="skill-track tech-skill-card__track" role="presentation">
+									<div class="skill-fill tech-skill-card__fill" style={`width: ${row.pct}%;`} />
+								</div>
+								<p class="tech-skill-card__items">{row.items}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</div>
+
+		<!-- Bottom right: soft skills & languages (panel + icon cards) -->
+		<div class="about-showcase__cell about-showcase__cell--soft">
+			<div class="about-panel about-panel--soft">
+				<div class="soft-strip">
+					<svg class="soft-strip__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+					<h3 class="soft-strip__title">Soft Skills &amp; Languages</h3>
+				</div>
+
+				<div class="lang-row" aria-label="Languages">
+					<div class="lang-chip">
+						<span class="lang-chip__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" class="lang-chip__svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+								<text
+									x="12"
+									y="15.5"
+									text-anchor="middle"
+									font-size="11"
+									fill="currentColor"
+									font-family="system-ui, 'Segoe UI', sans-serif"
+									font-weight="700">中</text>
+							</svg>
+						</span>
+						<span class="lang-chip__label">Mandarin</span>
+					</div>
+					<div class="lang-chip">
+						<span class="lang-chip__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" class="lang-chip__svg" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+								<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+								<path d="M8 7h8"></path>
+								<path d="M8 11h6"></path>
+							</svg>
+						</span>
+						<span class="lang-chip__label">English</span>
+					</div>
+					<div class="lang-chip">
+						<span class="lang-chip__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" class="lang-chip__svg" fill="none" stroke="currentColor" stroke-width="1.75">
+								<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+								<line x1="4" y1="22" x2="4" y2="15"></line>
+							</svg>
+						</span>
+						<span class="lang-chip__label">Malay</span>
+					</div>
+				</div>
+
+				<div class="soft-grid">
+				<SoftSkillCard name="Communication" rating={5}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+						<path d="M13 8H7"></path>
+						<path d="M17 12H7"></path>
+					</svg>
+				</SoftSkillCard>
+				<SoftSkillCard name="Leadership" rating={4}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+				</SoftSkillCard>
+				<SoftSkillCard name="Time management" rating={4}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<circle cx="12" cy="12" r="10"></circle>
+						<polyline points="12 6 12 12 16 14"></polyline>
+					</svg>
+				</SoftSkillCard>
+				<SoftSkillCard name="Self-learning" rating={5}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M9 18h6"></path>
+						<path d="M10 22h4"></path>
+						<path d="M12 2a7 7 0 0 0-4 12.33V18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3.67A7 7 0 0 0 12 2z"></path>
+					</svg>
+				</SoftSkillCard>
+				<SoftSkillCard name="Adaptability" rating={4}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<polyline points="15 18 9 12 15 6"></polyline>
+						<polyline points="9 18 15 12 9 6"></polyline>
+					</svg>
+				</SoftSkillCard>
+				<SoftSkillCard name="Self-discipline" rating={5}>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+					</svg>
+				</SoftSkillCard>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
