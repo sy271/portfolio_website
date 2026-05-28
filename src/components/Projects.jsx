@@ -87,7 +87,7 @@ const projects = [
 		description:
 			"Maintenance and development of the Robocon website. Responsible for dependency upgrades, modules updates, fixing production runtime issues, ensuring SPA deep-linking works, and building and verifying production artifacts.",
 		github: "https://github.com/sy271/RoboconTeamWebsite_2425",
-		demo: "",
+		demo: "https://robocon-team-website-2425.vercel.app/",
 		image:
 			utmroboconwebsite.src,
 	},
