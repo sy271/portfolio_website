@@ -9,7 +9,13 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   output: 'server',        // ← must be 'server' or 'hybrid'
-  adapter: vercel(),
+  adapter: vercel(
+    {
+      webAnalytics: {
+        enabled: true,
+      },
+    }
+  ),
   integrations: [react(), svelte()],
 
   vite: {
